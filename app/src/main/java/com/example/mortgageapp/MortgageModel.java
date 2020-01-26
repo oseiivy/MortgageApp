@@ -18,9 +18,9 @@ public class MortgageModel
         int amortization = Integer.parseInt(this.amortization);
         double interestrate = Double.parseDouble(this.interestrate);
         double P = Double.parseDouble(this.principle);
-        double r = interestrate/120;
+        double r = interestrate/1200;
         int n = amortization * 12;
-        double result = (r * P)/(1-Math.pow((1+r), -n));
+        double result = (r * P)/(1-Math.pow((1+r), -1*n));
         String payment = String.format("%,.2f", result);
         return payment;
     }
