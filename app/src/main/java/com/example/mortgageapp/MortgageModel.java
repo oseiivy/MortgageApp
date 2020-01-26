@@ -2,9 +2,9 @@ package com.example.mortgageapp;
 
 public class MortgageModel
 {
-    private double principle;
-    private int amortization;
-    private double interestrate;
+    private String principle;
+    private String amortization;
+    private String interestrate;
 
     public MortgageModel(String p, String a, String i)
     {
@@ -15,11 +15,13 @@ public class MortgageModel
 
     public String computepayment()
     {
-        double r = this.interestrate/120;
-        double n = this.amortization * 12;
-        double P = this.principle;
+        int amortization = Integer.parseInt(this.amortization);
+        double interestrate = Double.parseDouble(this.interestrate);
+        double P = Double.parseDouble(this.principle);
+        double r = interestrate/120;
+        int n = amortization * 12;
         double result = (r * P)/(1-Math.pow((1+r), -n));
-        String payment = String.format("%,d", result);
+        String payment = String.format("%,.2f", result);
         return payment;
     }
 }
