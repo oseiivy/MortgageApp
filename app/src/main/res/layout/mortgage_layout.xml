@@ -7,7 +7,7 @@
     tools:context=".MortgageActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/principleLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Principle (in dollars)"
@@ -15,50 +15,50 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/principleBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/principleLabel" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/amortizationLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Amortization (in years)"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/principleBox" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/amortizationBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/amortizationLabel" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/interestLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Interest (in years)"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/amortizationBox" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/interestBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/interestLabel" />
 
     <Button
         android:id="@+id/button"
@@ -68,10 +68,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/interestBox" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
