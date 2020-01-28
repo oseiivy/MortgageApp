@@ -24,9 +24,9 @@ public class EntryForm extends AppCompatActivity {
         String interest = interestView.getText().toString();
 
         MortgageModel myModel = new MortgageModel(principle, amortization, interest);
-        String myMortgage = myModel.computepayment();
+        String myMortgage = myModel.outstandingAfter(int x);
 
-        ((TextView) findViewById(R.id.answer)).setText("$" + myMortgage);
+        ((TextView) findViewById(R.id.answer)).setText("$" + myMortgage );
 
     }
 }
