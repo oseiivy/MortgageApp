@@ -35,7 +35,7 @@ public class MortgageModel
         int x = 60;
         double monthlyPayment = (r * P)/(1-Math.pow((1+r), -1*n));
         double outstanding = P - (monthlyPayment/r - P)*(Math.pow((1+r),x)-1);
-        String result = String.format("%.0f", outstanding);
+        String result = String.format("%,.0f", outstanding);
         return result;
     }
 

@@ -14,8 +14,8 @@ public class EntryForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry_form);
     }
-    public void buttonClicked(View v)
-    {
+
+    public void buttonClicked(View v) {
         EditText principleView = (EditText) findViewById(R.id.principleBox);
         String principle = principleView.getText().toString();
         EditText amortizationView = (EditText) findViewById(R.id.amortizationBox);
@@ -24,9 +24,24 @@ public class EntryForm extends AppCompatActivity {
         String interest = interestView.getText().toString();
 
         MortgageModel myModel = new MortgageModel(principle, amortization, interest);
-        String myMortgage = myModel.outstandingAfter(int x);
+        String myMortgage = myModel.computepayment();
 
-        ((TextView) findViewById(R.id.answer)).setText("$" + myMortgage );
 
+        ((TextView) findViewById(R.id.answer)).setText("$" + myMortgage);
+
+
+    }
+
+    public void button2Clicked(View v) {
+        EditText principleView = (EditText) findViewById(R.id.principleBox);
+        String principle = principleView.getText().toString();
+        EditText amortizationView = (EditText) findViewById(R.id.amortizationBox);
+        String amortization = amortizationView.getText().toString();
+        EditText interestView = (EditText) findViewById(R.id.interestBox);
+        String interest = interestView.getText().toString();
+
+        MortgageModel myModel = new MortgageModel(principle, amortization, interest);
+        String myOutstanding = myModel.outstandingAfter();
+        ((TextView) findViewById(R.id.answer2)).setText("$" + myOutstanding);
     }
 }
